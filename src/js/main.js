@@ -13,7 +13,7 @@ $(document).ready(() => {
     getTodos();
     $('#form').keypress((event) => {
         if (event.keyCode == 13) {
-            
+
             createTodo();
         }
     });
@@ -116,6 +116,20 @@ function start() {
             });
     }
 
-
+    this.getZenQuote = function () {
+        const url = "https://api.github.com/zen"; //api for github zen quote
+        const data = $.get(url)
+            .then((data) => {
+                console.log(data);
+                const quote = document.querySelector('.quote');
+                const quoteWords = `   <br>
+           <i class="fa fa-quote-left"></i>${data}
+           <i class="fa fa-quote-right"></i>`;
+                quote.innerHTML = quoteWords;
+            }).catch((err) => {
+                console.log(err);
+            })
+    }
+    this.getZenQuote();
     init();
 }
