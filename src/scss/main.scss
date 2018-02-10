@@ -1,11 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ecf0f1;
+    font-size: 16px;
+}
 
+h1 {
+    color: #2c3e50;
+}
 
+.u-header-bold {
+    font-weight: 700;
+}
 
-//abstracts
-@import 'abstracts/variables';
-@import 'abstracts/_mixins.scss';
-//components
-@import 'components/_base.scss';
-@import 'components/_todo.scss';
-//layout
-@import 'layout/typography';
+.form {
+    background-color: #ecf0f1;
+    &__input {
+        font-size: 18px;
+        letter-spacing: 1px;
+        padding: 12px 8px;
+        width: 95%;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #2c3e50;
+        background-color: #ecf0f1;
+    }
+}
+
+.todo {
+    &__item {
+        cursor: pointer;
+        padding: 13px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all .4s ease;
+        &:hover {
+            background-color: rgba(#ddd, .6);
+        }
+        &.active {
+            //class with active
+            background-color: rgba(#ddd, .6);
+        }
+    }
+    &__text {
+     transition: all .3s ease;
+        letter-spacing: 1px;
+        &.active {
+            text-decoration: line-through;
+        }
+    }
+}
+
+.todo__item.active {
+    background-color: rgba(#ddd, .6);
+}
+
+.todo__text.todo__item.active {
+    text-decoration: line-through;
+}
+
+.quote {
+    font-size: 14px;
+}
+
+.fa {
+    font-size: 80%;
+    &-quote-left {
+        padding-right: 3px;
+    }
+    &-quote-right {
+        padding-left: 3px;
+    }
+    &-times {
+        color: red;
+        font-size: 150%;
+        padding-bottom: 15px;
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+span
+{}
