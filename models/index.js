@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const DB_URL = process.env.DB_URL || "mongodb://localhost/todo_api";
+const DB_URL = process.env.DB_URL;
+const DB_local=  "mongodb://localhost/todo_api";
 
 //set debug true for console
 mongoose.set('debug', true);
 //conect to database
-mongoose.connect(DB_URL);
+mongoose.connect(DB_URL || DB_local);
 mongoose.connection
     .once("open", () => {
         //Display to user successfully connected to DB
