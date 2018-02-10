@@ -4,7 +4,7 @@
   "description": "To Do List purpose of incorporating gulp, bootstrap and practicing AJAX and creating APIs",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,6 @@
   "bugs": {
     "url": "https://github.com/WingChhun/Momentum_Todo_list/issues"
   },
-  "scripts":{
-    "start": "node app.js"
-  },
   "homepage": "https://github.com/WingChhun/Momentum_Todo_list#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -27,7 +24,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "mongoose": "^5.0.4",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "tslib": "^1.9.0"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",

@@ -13,7 +13,7 @@ $(document).ready(() => {
     getTodos();
     $('#form').keypress((event) => {
         if (event.keyCode == 13) {
-            console.log("fire");
+            
             createTodo();
         }
     });
