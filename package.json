@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/WingChhun/Momentum_Todo_list/issues"
   },
+  "scripts":{
+    "start": "node app.js"
+  },
   "homepage": "https://github.com/WingChhun/Momentum_Todo_list#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
