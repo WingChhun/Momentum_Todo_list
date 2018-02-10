@@ -10,16 +10,52 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
-    
+
 </head>
 
 
 <body>
 
-    <h1>HELLOO TEST FROM HTL FILE</h1>
+    <!-- background header here -->
+    <div class="bg-header">
+        <div class="container">
+            <br>
+            <br>
+
+            <!-- will put time of date here and a inspirational quote -->
+            <div class="header__text mt-3">
+
+                <h1 class="text-center mb-2">HELLOO TEST FROM HTL FILE</h1>
+                <p class="text-muted mb-2">
+                    <i class="fa fa-quote-left"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio optio similique mollitia ullam reprehenderit
+                    consectetur! Mollitia quod doloremque incidunt accusamus, voluptatem qui laboriosam perferendis ea? Perferendis
+                    similique provident asperiores debitis!</p>
+                <i class="fa fa-quote-right"></i>
+            </div>
+
+            <!-- ccreate a todo here -->
+            <!-- when user hits enter send post request -->
+
+            <form id="form" action="/api/todos" method="POST">
+
+                <input type="text" name="name" placeholder="New Todo...">
+            </form>
+            <!-- end form -->
+            <div class="todo">
+                <div class="todo__item">
+                    <p class="todo__text">Accomplish goal</p>
+                </div>
+                <!-- end todo ite -->
+            </div>
+            <!-- end todo container -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end bg-header -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
